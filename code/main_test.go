@@ -42,4 +42,5 @@ func TestSubtraction(t *testing.T) {
 // add _test suffic to package for blackbox tests (package main_test)
 // best practise is to run black box testing
 // tests the API of the package and does not consider the internal implementatino details of the
-// package, more robust and more representative to the consumers of the package.
+// package, more robust and more representative to the consumers of the package. There are some
+// cases where white box testing is important to we have that option to choose from from go
