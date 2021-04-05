@@ -50,3 +50,29 @@ func TestDepart(t *testing.T) {
 // gp test -run {regexp} <- run only tests matching {regexp}
 // go help test
 // go help testflag
+
+// table-driven test
+
+func TestGreetTableDriven(t *testing.T) {
+	scenarious := []struct {
+		input  string
+		expect string
+	}{
+		{input: "Gopher", expect: "Hello, Gopher!\n"},
+		{input: "", expect: "Hello, !\n"},
+	}
+
+	for _, s := range scenarious {
+		got := Greet(s.input)
+		if got != s.expect {
+			t.Errorf("Did not get expected result for input '%v'. Expected %q, got: %q\n",
+				s.input, s.expect, got)
+		}
+	}
+}
+
+// Useful functions
+// Log and Logf, Helper, Skip, Skipf and SkipNow
+// Run
+// parallel
+// golang.org/pkg/testing
