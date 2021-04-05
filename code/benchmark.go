@@ -44,3 +44,7 @@ func BenchmarkSHA512(b *testing.B) {
 // go test -bench .-benchtime 10s
 // <- end-to-end -benchtime must be higher seconds
 // 99 million interations to reach our ten second target
+
+// go tool pprof profile.out
+// svg <- generates a svg type file for profile info
+// graphviz
