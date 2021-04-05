@@ -1,12 +1,15 @@
 // integrtion test or end to end tests it maske ssense to have folder
-package messages
+package messages_test
 
-import "testing"
+import (
+	"gotesting/code/messages"
+	"testing"
+)
 
 // Stub of two test functions. Pointer to testing.T objects, convetionally as referred to withing
 // the test of variable T
 func TestGreet(t *testing.T) {
-	got := Greet("Gopher")
+	got := messages.Greet("Gopher")
 	expect := "Hello, Gopher!\n"
 
 	if got != expect {
@@ -15,7 +18,7 @@ func TestGreet(t *testing.T) {
 }
 
 func TestDepart(t *testing.T) {
-	got := Depart("Gopher")
+	got := messages.Depart("Gopher")
 	expect := "Goodbye, Gopher\n"
 
 	if got != expect {
