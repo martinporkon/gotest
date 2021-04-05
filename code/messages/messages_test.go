@@ -23,6 +23,9 @@ func TestDepart(t *testing.T) {
 	}
 }
 
+// Error <- signasl a failed test , but does not stop the rest of the test from executing
+// Fatal <- will fail the test and stop its execution
+
 // Immediate failures
 // t.FailNow()
 // t.Fatal(args ...interface{})
@@ -32,3 +35,12 @@ func TestDepart(t *testing.T) {
 // t.Fail()
 // t.Error(args ...interface{})
 // t.Errorf(format string, args ...interface{})
+
+// Test specified packages
+// go test {pkg1} {pkg2} ...., {pkgn}
+
+// go test ./... <- run tests in current package and descendats
+// go test -v <- generate verbose output
+// gp test -run {regexp} <- run only tests matching {regexp}
+// go help test
+// go help testflag
