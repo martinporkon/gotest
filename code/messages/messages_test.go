@@ -23,6 +23,12 @@ func TestDepart(t *testing.T) {
 	}
 }
 
+// go test -coverprofile cover.out <- generates a file
+// go tool cover -func cover.out <- analyses coverage file
+// go tool cover -html cover.out <- performs in a web browser
+
+// go test -coverprofile count.out -covermode count <- generates another profile
+
 // Error <- signasl a failed test , but does not stop the rest of the test from executing
 // Fatal <- will fail the test and stop its execution
 
