@@ -30,7 +30,8 @@ func BenchmarkSHA512(b *testing.B) {
 	b.StartTimer()
 	// test itself
 	for i := 0; i < b.N; i++ {
-		sha512.Sum512(data)
+		h := sha512.New() // takes 50% longer
+		h.Sum(data)       // allocating memory
 	}
 }
 
