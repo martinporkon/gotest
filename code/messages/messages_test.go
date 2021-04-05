@@ -18,7 +18,7 @@ func TestGreet(t *testing.T) {
 }
 
 func TestDepart(t *testing.T) {
-	got := messages.Depart("Gopher")
+	got := messages.depart("Gopher")
 	expect := "Goodbye, Gopher\n"
 
 	if got != expect {
